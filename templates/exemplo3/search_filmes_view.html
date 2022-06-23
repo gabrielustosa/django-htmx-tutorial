@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="mx-auto pt-5" style="width: 50%;">
+        <div class="input-group rounded">
+            <input type="search" class="form-control rounded" placeholder="Pesquisar" aria-label="Pesquisar"
+                   hx-post="{% url 'core:search_films' %}" hx-target="#filme-list"
+                   hx-trigger="keyup changed delay:500ms" name="search"/>
+            <div class="input-group-text border-0" id="search-addon">
+                <i class="bi bi-search"></i>
+            </div>
+        </div>
+        <div id="filme-list">
+        </div>
+    </div>
+{% endblock %}

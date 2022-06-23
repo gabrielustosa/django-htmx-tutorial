@@ -1,0 +1,18 @@
+<table class="table mt-5">
+    <thead>
+    <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Diretor</th>
+        <th scope="col">Ano</th>
+    </tr>
+    </thead>
+    <tbody id="filme-list">
+    {% for filme in filmes %}
+        <tr>
+            <td>{{ filme.nome }}</td>
+            <td>{{ filme.diretor }}</td>
+            <td>{{ filme.ano }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

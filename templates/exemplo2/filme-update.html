@@ -1,0 +1,9 @@
+{% load bootstrap5 %}
+
+<form hx-post="{% url 'core:update_filme' filme.id %}" hx-target="#content" class="d-flex align-items-center">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <button type="submit" class="ms-2 mt-3 btn btn-primary">
+        Salvar
+    </button>
+</form>

@@ -1,0 +1,21 @@
+{% load bootstrap5 %}
+
+{% for filme in filmes %}
+    <tr>
+        <td>{{ filme.nome }}</td>
+        <td>{{ filme.diretor }}</td>
+        <td>{{ filme.ano }}</td>
+        <td>
+            <span class="text-info" style="cursor: pointer;"
+                  hx-get="{% url 'core:render_update_filme' filme.id %}"
+                  hx-target="#filme-form">
+                <i class="bi bi-pencil-fill"></i>
+            </span>
+            <span class="ps-3 text-danger cursor-pointer" style="cursor: pointer;"
+                  hx-post="{% url 'core:delete_filme' filme.id %}"
+                  hx-target="#filme-list">
+                <i class="bi bi-trash-fill"></i>
+            </span>
+        </td>
+    </tr>
+{% endfor %}
