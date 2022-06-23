@@ -10,7 +10,8 @@ Siga os passos abaixo para clonar a aplicação no seu próprio computador
 
 ```
 git clone https://github.com/gabrielustosa/django-htmx-tutorial.git
-python3 -m venv .venv
+cd django-htmx-tutorial/
+python3 -m venv venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python manage.py migrate
